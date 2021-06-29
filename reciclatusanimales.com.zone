@@ -1,0 +1,40 @@
+$TTL 86400
+@   IN  SOA     ns1.reciclatusanimales.com. root.reciclatusanimales.com. (
+        2013042201  ;Serial
+        3600        ;Refresh
+        1800        ;Retry
+        604800      ;Expire
+        86400       ;Minimum TTL
+)
+; Specify our two nameservers
+		IN	NS		ns1.reciclatusanimales.com.
+		IN	NS		ns2.reciclatusanimales.com.
+; Resolve nameserver hostnames to IP, replace with your two droplet IP addresses.
+ns1		IN	A		107.6.142.229
+ns2		IN	A		107.6.142.229
+
+; Define hostname -> IP pairs which you wish to resolve
+@			IN	A		107.6.142.229
+www			IN	A		107.6.142.229
+www.blog-fome		IN 	A		107.6.142.229
+blog-fome		IN 	A		107.6.142.229
+www.api			IN	A		107.6.142.229
+api			IN	A		107.6.142.229
+www.sitio-cuqui 	IN 	A		107.6.142.229
+sitio-cuqui		IN	A		107.6.142.229
+www.tienda-audio	IN	A		107.6.142.229
+tienda-audio		IN	A		107.6.142.229
+www.ecoveganismos	IN	A		107.6.142.229
+ecoveganismos		IN	A		107.6.142.229
+www.cuenteros		IN	A		107.6.142.229
+cuenteros		IN	A		107.6.142.229
+www.tienda-nona		IN	A		107.6.142.229
+tienda-nona		IN	A		107.6.142.229
+www.social		IN	A		107.6.142.229
+social			IN	A		107.6.142.229
+www.social-network	IN	A		107.6.142.229
+social-network		IN	A		107.6.142.229
+www.chat		IN	A		107.6.142.229
+chat			IN	A		107.6.142.229
+#www.todo		IN	A		107.6.142.229
+#todo			IN	A		107.6.142.229

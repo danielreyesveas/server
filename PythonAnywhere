@@ -1,0 +1,59 @@
+¿Carpeta Scripts o virtualenv local?
+
+
+
+
+Crear repositorio
+
+Crear cuenta en pythonanywhere
+
+New console / Bash
+
+mkvirtualenv --python=python3.7 django2
+
+(source ~/.virtualenvs/django2/bin/activate - deactivate)
+
+(pip freeze > requirements.txt)
+
+git clone 
+
+(/repo-folder)
+
+pip install -r requirements.txt
+
+(/project-folder)
+
+python manage.py check --deploy
+
+(/settings.py)
+
+DEBUG = False
+ALLOWED_HOSTS = [ 'localhost', 'site.pythonanywhere.com', '127.0.0.1']
+
+Web/add new web app
+
+Code: 
+Source code: (pwd on bash)
+
+Virtualenv:
+(which python on bash) (hasta el nombre del entorno)
+
+(wsgi.py)
+
+https://help.pythonanywhere.com/pages/FollowingTheDjangoTutorial/
+
+
+import os
+import sys
+
+path = os.path.expanduser('~/mysite')
+if path not in sys.path:
+    sys.path.insert(0, path)
+os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'
+from django.core.wsgi import get_wsgi_application
+from django.contrib.staticfiles.handlers import StaticFilesHandler
+application = StaticFilesHandler(get_wsgi_application())
+
+
+
+reemplazar mysite y settings

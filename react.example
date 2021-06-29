@@ -1,0 +1,15 @@
+server {
+
+	listen 80;
+	listen [::]:80;
+	
+   	server_name example.reciclatusanimales.com www.example.reciclatusanimales.com;	 
+	
+	location / {
+		try_files $uri /index.html =404;
+	}
+
+	root /srv/www/example;
+	index index.html index.htm;
+
+}

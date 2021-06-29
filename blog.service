@@ -1,0 +1,17 @@
+[Unit]
+Description=gunicorn daemon
+Requires=blog.socket
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/srv/www/blog
+ExecStart=/opt/venv/blog/bin/gunicorn \
+	--access-logfile - \
+	--workers 3 \
+	--bind unix:/run/blog.sock \
+	blogApp.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
